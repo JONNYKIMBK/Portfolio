@@ -1,34 +1,16 @@
-.Navbar {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid;
-  max-height: 20vh;
-  border-radius: 4px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.list {
-  width: 70vw;
-}
-
-.ul {
-  list-style: none;
-  list-style-type: none;
-}
-.li {
-  float: left;
-  margin-right: 15vw;
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 3px;
-  margin-bottom: 3px;
-}
 .link {
   color: antiquewhite;
+  border: 1;
+}
+.img {
+  max-height: 10vh;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.img {
-  max-height: 15vh;
-  object-fit: contain;
+.img2 {
+  max-height: 10vh;
+  object-fit: cover;
+  border-radius: 50%;
+  border: antiquewhite solid;
 }
