@@ -21,7 +21,7 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [style, setStyle] = useState(styles.img);
 
   const hoverChange = () => {

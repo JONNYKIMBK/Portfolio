@@ -1,0 +1,45 @@
+.body {
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.name {
+  font-size: 7vh;
+}
+
+.titles {
+  font-size: 4vh;
+  font-weight: bold;
+  margin: 1vh;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+.first {
+  width: 49%;
+  font-size: large;
+}
+
+.second {
+  width: 49%;
+  font-size: large;
+  border: solid;
+  padding-left: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  .first {
+    width: 90%;
+  }
+  .second {
+    width: 90%;
+  }
+  .resume {
+    flex-direction: column;
+  }
+}

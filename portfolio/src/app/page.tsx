@@ -1,3 +1,9 @@
+import Resume from "./components/Resume";
+
 export default function Home() {
-  return <div className="default">Hola</div>;
+  return (
+    <div>
+      <Resume />
+    </div>
+  );
 }
