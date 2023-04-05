@@ -85,8 +85,11 @@ export default function Navbar() {
             }}
           >
             {links.map(({ label, route }) => (
-              <Box sx={{ border: 1, padding: 1, borderRadius: "20%" }}>
-                <Link href={route} className={styles.link}>
+              <Box
+                key={label}
+                sx={{ border: 1, padding: 1, borderRadius: "20%" }}
+              >
+                <Link key={label} href={route} className={styles.link}>
                   <div>{label}</div>
                 </Link>
               </Box>
@@ -105,9 +108,12 @@ export default function Navbar() {
             }}
           >
             {links.map(({ label, route }) => (
-              <Zoom in={checked}>
-                <Box sx={{ border: 1, padding: 1, borderRadius: "20%" }}>
-                  <Link href={route} className={styles.link}>
+              <Zoom key={label} in={checked}>
+                <Box
+                  key={label}
+                  sx={{ border: 1, padding: 1, borderRadius: "20%" }}
+                >
+                  <Link key={label} href={route} className={styles.link}>
                     <div>{label}</div>
                   </Link>
                 </Box>
