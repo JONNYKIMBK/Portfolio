@@ -6,3 +6,9 @@ a {
   text-decoration: none;
   text-decoration-color: antiquewhite;
 }
+
+.titles {
+  font-size: 4vh;
+  font-weight: bold;
+  margin: 1vh;
+}

@@ -33,7 +33,7 @@ export default function Resume() {
         </div>
 
         <div className={styles.second}>
-          <p className={styles.titles}>Habilidades técnicas:</p>
+          <p className="titles">Habilidades técnicas:</p>
           <div className={styles.resume}>
             <div className={styles.first}>
               <p>Lenguajes:</p>
@@ -64,7 +64,7 @@ export default function Resume() {
               </ul>
             </div>
           </div>
-          <p className={styles.titles}>Habilidades blandas:</p>
+          <p className="titles">Habilidades blandas:</p>
           <ul>
             <li key="Gestión del tiempo">Gestión del tiempo</li>
             <li key="Trabajo en equipo">Trabajo en equipo</li>
