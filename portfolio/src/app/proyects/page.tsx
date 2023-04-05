@@ -40,12 +40,18 @@ export default function Proyects() {
             </p>
             <div className={style.links}>
               <p>
-                <a href="https://devs-learning-5hal.vercel.app/">
+                <a
+                  href="https://devs-learning-5hal.vercel.app/"
+                  target="_blank"
+                >
                   <b>Deploy</b>
                 </a>
               </p>
               <p>
-                <a href="https://github.com/Jonatan-R-Villalva/Devs-Learning">
+                <a
+                  href="https://github.com/Jonatan-R-Villalva/Devs-Learning"
+                  target="_blank"
+                >
                   <b>Github</b>
                 </a>
               </p>
@@ -74,12 +80,18 @@ export default function Proyects() {
 
             <div className={style.links}>
               <p>
-                <a href="https://pi-pokemon-jonnykim.vercel.app/">
+                <a
+                  href="https://pi-pokemon-jonnykim.vercel.app/"
+                  target="_blank"
+                >
                   <b>Deploy</b>
                 </a>
               </p>
               <p>
-                <a href="https://github.com/JONNYKIMBK/PI_Pokemon">
+                <a
+                  href="https://github.com/JONNYKIMBK/PI_Pokemon"
+                  target="_blank"
+                >
                   <b>Github</b>
                 </a>
               </p>
