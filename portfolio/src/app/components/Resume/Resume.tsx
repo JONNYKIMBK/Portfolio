@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Resume.module.css";
 
 export default function Resume() {
@@ -29,6 +30,15 @@ export default function Resume() {
             Estoy muy emocionado por las oportunidades que me puedan ofrecer y
             estoy seguro de que podré aportar valor a cualquier proyecto en el
             que participe.
+          </p>
+
+          <p>
+            <Link
+              href="https://drive.google.com/file/d/1yQyp-fHjKJSGt6QrYtERDz6HOYCBu5oa/view?usp=share_link"
+              target="_blank"
+            >
+              <b>CV - Resume</b>
+            </Link>
           </p>
         </div>
 
