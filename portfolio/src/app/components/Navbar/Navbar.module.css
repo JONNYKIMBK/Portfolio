@@ -1,6 +1,7 @@
 .link {
   color: antiquewhite;
-  border: 1;
+  border: 1 solid;
+  font-weight: bold;
 }
 .img {
   max-height: 10vh;

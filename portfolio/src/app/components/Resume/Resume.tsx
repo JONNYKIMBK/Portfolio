@@ -39,36 +39,36 @@ export default function Resume() {
               <p>Lenguajes:</p>
 
               <ul>
-                <li>Javascript</li>
-                <li>Typescript</li>
+                <li key="Javascript">Javascript</li>
+                <li key="Typescript">Typescript</li>
               </ul>
 
               <p>Backend:</p>
               <ul>
-                <li>Node.js</li>
-                <li>Express.js</li>
+                <li key="Node.js">Node.js</li>
+                <li key="Express.js">Express.js</li>
               </ul>
             </div>
             <div className={styles.first}>
               <p>Frontend:</p>
               <ul>
-                <li>React.js</li>
-                <li>Redux</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Material UI</li>
+                <li key="React.js">React.js</li>
+                <li key="Redux">Redux</li>
+                <li key="HTML5">HTML5</li>
+                <li key="CSS3">CSS3</li>
+                <li key="Material UI">Material UI</li>
               </ul>
               <p>Bases de datos:</p>
               <ul>
-                <li>PostgreSQL</li>
+                <li key="PostgreSQL">PostgreSQL</li>
               </ul>
             </div>
           </div>
           <p className={styles.titles}>Habilidades blandas:</p>
           <ul>
-            <li>Gestión del tiempo</li>
-            <li>Trabajo en equipo</li>
-            <li>Adaptabilidad al cambio</li>
+            <li key="Gestión del tiempo">Gestión del tiempo</li>
+            <li key="Trabajo en equipo">Trabajo en equipo</li>
+            <li key="Adaptabilidad al cambio">Adaptabilidad al cambio</li>
           </ul>
         </div>
       </div>
