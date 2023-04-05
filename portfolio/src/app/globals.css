@@ -1,18 +1,19 @@
 body {
-  background-color: black;
-  color: antiquewhite;
+  background-color: #190a12;
+  color: #b3c9c1;
 }
 a {
   text-decoration: none;
-  text-decoration-color: antiquewhite;
+  text-decoration-color: #eee9c7;
 }
 
 .titles {
   font-size: 4vh;
   font-weight: bold;
   margin: 1vh;
+  color: #cec7b6;
 }
 
 b {
-  color: white;
+  color: #eee9c7;
 }

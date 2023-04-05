@@ -13,7 +13,7 @@ const container = {
   alignItems: "center",
   marginTop: 2,
   fontSize: 50,
-  color: "antiquewhite",
+  color: "#eee9c7",
 };
 
 const icon = {

@@ -1,5 +1,5 @@
 .link {
-  color: antiquewhite;
+  color: #eee9c7;
   border: 1 solid;
   font-weight: bold;
 }
@@ -13,5 +13,5 @@
   max-height: 10vh;
   object-fit: cover;
   border-radius: 50%;
-  border: antiquewhite solid;
+  border: #eee9c7 solid;
 }
