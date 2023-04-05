@@ -4,19 +4,25 @@ import { AppBar, Box, Toolbar, Zoom } from "@mui/material";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
+import PersonIcon from "@mui/icons-material/Person";
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
 
 const links = [
   {
-    label: "Home",
+    label: "Resumen",
     route: "/",
+    icon: <PersonIcon />,
   },
   {
     label: "Proyectos",
     route: "/proyects",
+    icon: <FormatListBulletedIcon />,
   },
   {
     label: "Contacto",
     route: "/contact",
+    icon: <ContactPageIcon />,
   },
 ];
 
@@ -75,7 +81,7 @@ export default function Navbar() {
 
           {/* 
           ////////////////////////////////
-          desktop */}
+          mobile */}
           <Box
             sx={{
               display: { md: "none", xs: "flex" },
@@ -84,13 +90,22 @@ export default function Navbar() {
               width: "80vw",
             }}
           >
-            {links.map(({ label, route }) => (
+            {links.map(({ label, route, icon }) => (
               <Box
                 key={label}
-                sx={{ border: 1, padding: 1, borderRadius: "20%" }}
+                sx={{ border: 1, padding: "1vw", borderRadius: "10px" }}
               >
                 <Link key={label} href={route} className={styles.link}>
-                  <div>{label}</div>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: { xs: "column", md: "row" },
+                      alignItems: "center",
+                    }}
+                  >
+                    {icon}
+                    <div>{label}</div>
+                  </Box>
                 </Link>
               </Box>
             ))}
@@ -99,22 +114,36 @@ export default function Navbar() {
           {/* ///////////////////////////////// */}
 
           {/* ////////////////////////////////////////////
-          mobile */}
+          desktop */}
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
               justifyContent: { xs: "space-between", md: "space-around" },
               width: "80vw",
+              padding: "1vw",
             }}
           >
-            {links.map(({ label, route }) => (
+            {links.map(({ label, route, icon }) => (
               <Zoom key={label} in={checked}>
                 <Box
                   key={label}
-                  sx={{ border: 1, padding: 1, borderRadius: "20%" }}
+                  sx={{
+                    border: 1,
+                    padding: 1,
+                    borderRadius: "10px",
+                  }}
                 >
                   <Link key={label} href={route} className={styles.link}>
-                    <div>{label}</div>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: { xs: "column", md: "row" },
+                        alignItems: "center",
+                      }}
+                    >
+                      {icon}
+                      <div>{label}</div>
+                    </Box>
                   </Link>
                 </Box>
               </Zoom>

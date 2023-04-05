@@ -47,8 +47,6 @@
   display: flex;
   width: 30%;
   padding: 1vw;
-  border: 1px solid;
-  border-radius: 10px;
   justify-content: space-around;
 }
 
