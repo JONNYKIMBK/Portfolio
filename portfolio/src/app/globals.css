@@ -17,3 +17,11 @@ a {
 b {
   color: #eee9c7;
 }
+
+.big {
+  font-size: larger;
+}
+
+.color {
+  color: #5a5239;
+}

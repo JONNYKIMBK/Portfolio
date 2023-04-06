@@ -124,7 +124,7 @@ export default function Navbar() {
             }}
           >
             {links.map(({ label, route, icon }) => (
-              <Zoom key={label} in={checked}>
+              <Zoom key={label} in={checked} timeout={1500}>
                 <Box
                   key={label}
                   sx={{
