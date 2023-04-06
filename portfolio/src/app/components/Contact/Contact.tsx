@@ -78,7 +78,7 @@ export default function Contact() {
           }}
         >
           {links.map(({ label, route, icon }) => (
-            <Link href={route} target="_blank">
+            <Link key={label} href={route} target="_blank">
               <Box sx={container}>
                 {icon}
                 <span
