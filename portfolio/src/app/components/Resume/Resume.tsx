@@ -18,7 +18,7 @@ export default function Resume() {
   return (
     <div className={styles.body}>
       <div className={styles.resume}>
-        <Slide direction="right" in={true} timeout={1500}>
+        <Slide direction="right" in={true} timeout={1200}>
           <div className={styles.first}>
             <div className={styles.name}>Jonathan Kim</div>
             <p>
