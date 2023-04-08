@@ -1,10 +1,22 @@
 "use client";
 
-import { Slide } from "@mui/material";
+import { Box, Slide } from "@mui/material";
 import style from "./page.module.css";
 import { useState } from "react";
 
+//redux
+
+import type { RootState } from "@/app/Redux/store";
+import { useSelector, useDispatch } from "react-redux";
+
+////////////////
+
 export default function Proyects() {
+  //redux
+  const theme = useSelector((state: RootState) => state.theme);
+  const dispatch = useDispatch();
+  ///////////////////////////////
+
   const [linkStyle, setLinkStyle] = useState({
     deploy1: "",
     deploy2: "",
@@ -24,12 +36,14 @@ export default function Proyects() {
   return (
     <Slide direction="up" in={true} timeout={1500}>
       <div className={style.proyect}>
-        <div className="titles">Proyectos:</div>
+        <div className="titles" style={{ color: theme.bold }}>
+          Proyectos:
+        </div>
 
         <div className={style.body}>
           <div className={style.container}>
             <div className={style.title}>
-              <p>Devs Learning:</p>
+              <p style={{ color: theme.bold }}>Devs Learning:</p>
             </div>
 
             <div className={style.resume}>
@@ -52,7 +66,7 @@ export default function Proyects() {
 
               <p>
                 Las tecnologías usadas fueron{" "}
-                <b className={style.bold}>
+                <b style={{ color: theme.bold }}>
                   Typescript, JavaScript, Node.js, Express.js, React.js, Redux
                   toolkit, Material UI, PostgreSQL, sequelize, Firebase,
                   MercadoPago
@@ -69,6 +83,7 @@ export default function Proyects() {
                       className={linkStyle.deploy1}
                       onMouseOver={() => handleOver("deploy1")}
                       onMouseOut={() => handleOut("deploy1")}
+                      style={{ color: theme.bold }}
                     >
                       Deploy
                     </b>
@@ -83,6 +98,7 @@ export default function Proyects() {
                       className={linkStyle.github1}
                       onMouseOver={() => handleOver("github1")}
                       onMouseOut={() => handleOut("github1")}
+                      style={{ color: theme.bold }}
                     >
                       Github
                     </b>
@@ -94,7 +110,7 @@ export default function Proyects() {
 
           <div className={style.container}>
             <div className={style.title}>
-              <p>Pokedex:</p>
+              <p style={{ color: theme.bold }}>Pokedex:</p>
             </div>
 
             <div className={style.resume}>
@@ -121,6 +137,7 @@ export default function Proyects() {
                       className={linkStyle.deploy2}
                       onMouseOver={() => handleOver("deploy2")}
                       onMouseOut={() => handleOut("deploy2")}
+                      style={{ color: theme.bold }}
                     >
                       Deploy
                     </b>
@@ -135,6 +152,7 @@ export default function Proyects() {
                       className={linkStyle.github2}
                       onMouseOver={() => handleOver("github2")}
                       onMouseOut={() => handleOut("github2")}
+                      style={{ color: theme.bold }}
                     >
                       Github
                     </b>

@@ -2,25 +2,39 @@
 
 import Link from "next/link";
 import styles from "./Resume.module.css";
-import { Slide } from "@mui/material";
+import { Box, Slide } from "@mui/material";
 import { useState } from "react";
 
+//redux
+
+import type { RootState } from "@/app/Redux/store";
+import { useSelector, useDispatch } from "react-redux";
+
+///////////////////////////////////////////////////
+
 export default function Resume() {
-  const [linkStyle, setLinkStyle] = useState("");
+  //redux
+  const theme = useSelector((state: RootState) => state.theme);
+  const dispatch = useDispatch();
+  ///////////////////////////////
+  const [linkStyle, setLinkStyle] = useState(theme.title);
 
   const handleOver = () => {
-    setLinkStyle("color");
+    setLinkStyle(theme.link);
   };
   const handleOut = () => {
-    setLinkStyle("");
+    setLinkStyle(theme.title);
   };
 
   return (
+    // <Box sx={{ bgcolor: theme.background }}>
     <div className={styles.body}>
       <div className={styles.resume}>
         <Slide direction="right" in={true} timeout={1500}>
           <div className={styles.first}>
-            <div className={styles.name}>Jonathan Kim</div>
+            <Box sx={{ color: theme.bold }}>
+              <div className={styles.name}>Jonathan Kim</div>
+            </Box>
             <p>
               Hola, mi nombre es Jonathan, y soy un desarrollador web Full Stack
               de Posadas, Misiones, Argentina. Recientemente, he completado un
@@ -52,7 +66,8 @@ export default function Resume() {
                 target="_blank"
               >
                 <b
-                  className={linkStyle}
+                  style={{ color: linkStyle }}
+                  // className={linkStyle}
                   onMouseOver={handleOver}
                   onMouseOut={handleOut}
                 >
@@ -64,7 +79,9 @@ export default function Resume() {
         </Slide>
         <Slide direction="left" in={true} timeout={1500}>
           <div className={styles.second}>
-            <p className="titles">Habilidades técnicas:</p>
+            <p className="titles" style={{ color: theme.bold }}>
+              Habilidades técnicas:
+            </p>
             <div className={styles.resume}>
               <div className={styles.first}>
                 <p>Lenguajes:</p>
@@ -95,7 +112,9 @@ export default function Resume() {
                 </ul>
               </div>
             </div>
-            <p className="titles">Habilidades blandas:</p>
+            <p className="titles" style={{ color: theme.bold }}>
+              Habilidades blandas:
+            </p>
             <ul>
               <li key="Gestión del tiempo">Gestión del tiempo</li>
               <li key="Trabajo en equipo">Trabajo en equipo</li>
@@ -105,5 +124,6 @@ export default function Resume() {
         </Slide>
       </div>
     </div>
+    // </Box>
   );
 }

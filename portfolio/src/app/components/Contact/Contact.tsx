@@ -8,16 +8,13 @@ import EmailIcon from "@mui/icons-material/Email";
 import Link from "next/link";
 import { Slide } from "@mui/material";
 import { useState } from "react";
-import { ObjectType } from "typescript";
 
-const container = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  marginTop: 2,
-  fontSize: 50,
-  color: "#eee9c7",
-};
+//redux
+
+import type { RootState } from "@/app/Redux/store";
+import { useSelector, useDispatch } from "react-redux";
+
+///////////////////////////////////////////////////
 
 const icon = {
   marginRight: 1,
@@ -48,6 +45,19 @@ const links = [
 ];
 
 export default function Contact() {
+  //redux
+  const theme = useSelector((state: RootState) => state.theme);
+  const dispatch = useDispatch();
+  ///////////////////////////////
+  const container = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 2,
+    fontSize: 50,
+    color: theme.title,
+  };
+
   const [linkStyle, setLinkStyle] = useState({
     Linkedin: "",
     Github: "",
