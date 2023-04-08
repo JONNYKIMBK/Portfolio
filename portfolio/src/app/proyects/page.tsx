@@ -18,19 +18,19 @@ export default function Proyects() {
   ///////////////////////////////
 
   const [linkStyle, setLinkStyle] = useState({
-    deploy1: "",
-    deploy2: "",
-    github1: "",
-    github2: "",
+    deploy1: theme.bold,
+    deploy2: theme.bold,
+    github1: theme.bold,
+    github2: theme.bold,
   });
 
   const handleOver = (label: string) => {
     // setLinkStyle("color");
-    setLinkStyle({ ...linkStyle, [label]: "color" });
+    setLinkStyle({ ...linkStyle, [label]: theme.link });
   };
   const handleOut = (label: string) => {
     // setLinkStyle("");
-    setLinkStyle({ ...linkStyle, [label]: "" });
+    setLinkStyle({ ...linkStyle, [label]: theme.bold });
   };
 
   return (
@@ -80,10 +80,9 @@ export default function Proyects() {
                     target="_blank"
                   >
                     <b
-                      className={linkStyle.deploy1}
                       onMouseOver={() => handleOver("deploy1")}
                       onMouseOut={() => handleOut("deploy1")}
-                      style={{ color: theme.bold }}
+                      style={{ color: linkStyle.deploy1 }}
                     >
                       Deploy
                     </b>
@@ -95,10 +94,9 @@ export default function Proyects() {
                     target="_blank"
                   >
                     <b
-                      className={linkStyle.github1}
                       onMouseOver={() => handleOver("github1")}
                       onMouseOut={() => handleOut("github1")}
-                      style={{ color: theme.bold }}
+                      style={{ color: linkStyle.github1 }}
                     >
                       Github
                     </b>
@@ -134,10 +132,9 @@ export default function Proyects() {
                     target="_blank"
                   >
                     <b
-                      className={linkStyle.deploy2}
                       onMouseOver={() => handleOver("deploy2")}
                       onMouseOut={() => handleOut("deploy2")}
-                      style={{ color: theme.bold }}
+                      style={{ color: linkStyle.deploy2 }}
                     >
                       Deploy
                     </b>
@@ -149,10 +146,9 @@ export default function Proyects() {
                     target="_blank"
                   >
                     <b
-                      className={linkStyle.github2}
                       onMouseOver={() => handleOver("github2")}
                       onMouseOut={() => handleOut("github2")}
-                      style={{ color: theme.bold }}
+                      style={{ color: linkStyle.github2 }}
                     >
                       Github
                     </b>
