@@ -52,8 +52,6 @@ export default function Navbar() {
 
   ///////////////////////////////
 
-  const [colors, setColors] = useState(theme.navbarColor);
-
   const [style, setStyle] = useState(styles.img);
 
   const hoverChange = () => {

@@ -28,7 +28,7 @@ export const setColor = (
 
     if (color === "orange") {
       theme = {
-        title: "#333333",
+        title: "#ffffff",
         navbarColor: "#e6621f",
         link: "#e6621f",
         bold: "#ffffff",
@@ -39,7 +39,7 @@ export const setColor = (
 
     if (color === "blue") {
       theme = {
-        title: "#0a3143",
+        title: "#ffffff",
         navbarColor: "#276e90",
         link: "#276e90",
         bold: "#0a3143",
