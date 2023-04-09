@@ -2,7 +2,7 @@
 
 import { Box, Slide } from "@mui/material";
 import style from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //redux
 
@@ -32,6 +32,15 @@ export default function Proyects() {
     // setLinkStyle("");
     setLinkStyle({ ...linkStyle, [label]: theme.bold });
   };
+
+  useEffect(() => {
+    setLinkStyle({
+      deploy1: theme.bold,
+      deploy2: theme.bold,
+      github1: theme.bold,
+      github2: theme.bold,
+    });
+  }, [theme]);
 
   return (
     <Slide direction="up" in={true} timeout={1500}>
@@ -120,9 +129,11 @@ export default function Proyects() {
 
               <p>
                 Para la base de datos se utilizo{" "}
-                <b className={style.bold}>PostgreSQL y sequelize</b>, para el
-                backend <b className={style.bold}>Node y Express.js</b>, y para
-                el frontend con <b className={style.bold}> React.js y Redux</b>.
+                <b style={{ color: theme.bold }}>PostgreSQL y sequelize</b>,
+                para el backend{" "}
+                <b style={{ color: theme.bold }}>Node y Express.js</b>, y para
+                el frontend con{" "}
+                <b style={{ color: theme.bold }}> React.js y Redux</b>.
               </p>
 
               <div className={style.links}>

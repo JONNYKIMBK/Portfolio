@@ -7,11 +7,19 @@ import { useState } from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import TuneIcon from "@mui/icons-material/Tune";
+import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
+import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 
 //redux
 
 import type { RootState } from "@/app/Redux/store";
-import { useSelector, useDispatch } from "react-redux";
+import { setColor } from "@/app/Redux/Theme/actions";
+import { useAppDispatch, useAppSelector } from "@/app/Redux/hooks";
 
 ///////////////////////////////////////////////////
 
@@ -34,7 +42,18 @@ const links = [
 ];
 
 export default function Navbar() {
-  // const [checked, setChecked] = useState(true);
+  //redux
+  const theme = useAppSelector((state: RootState) => state.theme);
+  const dispatch = useAppDispatch();
+
+  const handleChange = (event: SelectChangeEvent) => {
+    dispatch(setColor(event.target.value as string));
+  };
+
+  ///////////////////////////////
+
+  const [colors, setColors] = useState(theme.navbarColor);
+
   const [style, setStyle] = useState(styles.img);
 
   const hoverChange = () => {
@@ -51,16 +70,6 @@ export default function Navbar() {
       setStyle(styles.img);
     }
   };
-
-  // const handleChange = () => {
-  //   // setChecked((prev) => !prev);
-
-  // };
-
-  //redux
-  const theme = useSelector((state: RootState) => state.theme);
-  const dispatch = useDispatch();
-  ///////////////////////////////
 
   return (
     <Box>
@@ -183,6 +192,61 @@ export default function Navbar() {
             ))}
           </Box>
           {/* /////////////////////////////////////////////////// */}
+
+          {/* //theme */}
+          <Box sx={{ marginTop: 2 }}>
+            <FormControl sx={{ width: 100 }} variant="outlined">
+              <InputLabel>
+                <TuneIcon></TuneIcon>
+              </InputLabel>
+              <Select
+                sx={{ borderColor: "blue" }}
+                onChange={handleChange}
+                label="Color"
+                autoWidth={true}
+              >
+                <MenuItem value={"blue"}>
+                  <CircleOutlinedIcon
+                    sx={{ color: "#0a3143", backgroundColor: "#276e90" }}
+                  >
+                    Blue
+                  </CircleOutlinedIcon>
+                </MenuItem>
+                <MenuItem value={"green"}>
+                  <CircleOutlinedIcon
+                    sx={{ color: "#eee9c7", backgroundColor: "#5a5239" }}
+                  >
+                    Green
+                  </CircleOutlinedIcon>
+                </MenuItem>
+                <MenuItem value={"orange"}>
+                  <CircleOutlinedIcon
+                    sx={{ color: "#333333", backgroundColor: "#e6621f" }}
+                  >
+                    Orange
+                  </CircleOutlinedIcon>
+                </MenuItem>
+
+                <MenuItem value={"red"}>
+                  <CircleOutlinedIcon
+                    sx={{ color: "#ff3b3f", backgroundColor: "#232323" }}
+                  >
+                    Red
+                  </CircleOutlinedIcon>
+                </MenuItem>
+
+                <MenuItem value={"dark"}>
+                  <CircleOutlinedIcon
+                    sx={{ color: "#FFFFFF", backgroundColor: "#000000" }}
+                  >
+                    Dark
+                  </CircleOutlinedIcon>
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
+          {/* //////////////////////////////////////////////////////////////// */}
         </Toolbar>
       </AppBar>
     </Box>

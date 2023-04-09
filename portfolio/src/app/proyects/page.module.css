@@ -27,7 +27,6 @@
   width: 20%;
   padding: 1vw;
   font-size: 3vh;
-  /* color: #cec7b6; */
 }
 
 .resume {
@@ -38,10 +37,6 @@
   border: 1px solid;
   border-radius: 10px;
   align-items: center;
-}
-
-.bold {
-  color: #cec7b6;
 }
 
 .links {

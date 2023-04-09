@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./Resume.module.css";
 import { Box, Slide } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //redux
 
@@ -17,14 +17,18 @@ export default function Resume() {
   const theme = useSelector((state: RootState) => state.theme);
   const dispatch = useDispatch();
   ///////////////////////////////
-  const [linkStyle, setLinkStyle] = useState(theme.title);
+  const [linkStyle, setLinkStyle] = useState(theme.bold);
 
   const handleOver = () => {
     setLinkStyle(theme.link);
   };
   const handleOut = () => {
-    setLinkStyle(theme.title);
+    setLinkStyle(theme.bold);
   };
+
+  useEffect(() => {
+    setLinkStyle(theme.bold);
+  }, [theme]);
 
   return (
     // <Box sx={{ bgcolor: theme.background }}>

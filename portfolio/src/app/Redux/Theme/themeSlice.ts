@@ -8,22 +8,32 @@ export interface ThemeState {
   link: string;
   bold: string;
   background: string;
+  text: string;
 }
 
 const initialState: ThemeState = {
-  title: "#eee9c7",
-  navbarColor: "#5a5239",
-  link: "#5a5239",
-  bold: "#cec7b6",
-  background: "#190a12",
+  title: "#efefef",
+  navbarColor: "#276e90",
+  link: "#276e90",
+  bold: "#0a3143",
+  background: "#efefef",
+  text: "black",
 };
 
 export const themeSlice = createSlice({
   name: "theme",
   initialState,
-  reducers: {},
+  reducers: {
+    setTheme: (state, { payload }) => {
+      state.title = payload.title;
+      state.navbarColor = payload.navbarColor;
+      state.link = payload.link;
+      state.bold = payload.bold;
+      state.background = payload.background;
+    },
+  },
 });
 
-export const {} = themeSlice.actions;
+export const reducer = themeSlice.actions;
 
 export default themeSlice.reducer;

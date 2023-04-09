@@ -55,7 +55,7 @@ export default function Contact() {
     alignItems: "center",
     marginTop: 2,
     fontSize: 50,
-    color: theme.title,
+    color: theme.bold,
   };
 
   const [linkStyle, setLinkStyle] = useState({
