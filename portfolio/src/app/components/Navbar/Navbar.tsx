@@ -12,7 +12,6 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import TuneIcon from "@mui/icons-material/Tune";
-import CircleTwoToneIcon from "@mui/icons-material/CircleTwoTone";
 import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 
 //redux
@@ -20,26 +19,16 @@ import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 import type { RootState } from "@/app/Redux/store";
 import { setColor } from "@/app/Redux/Theme/actions";
 import { useAppDispatch, useAppSelector } from "@/app/Redux/hooks";
+import { setLang } from "@/app/Redux/Language/actions";
 
 ///////////////////////////////////////////////////
 
-const links = [
-  {
-    label: "Resumen",
-    route: "/",
-    icon: <PersonIcon />,
-  },
-  {
-    label: "Proyectos",
-    route: "/proyects",
-    icon: <FormatListBulletedIcon />,
-  },
-  {
-    label: "Contacto",
-    route: "/contact",
-    icon: <ContactPageIcon />,
-  },
-];
+//Languages
+
+import { es } from "../../../../public/locale/es";
+import { en } from "../../../../public/locale/en";
+
+///////////////////////////////////////////////////////
 
 export default function Navbar() {
   //redux
@@ -50,7 +39,35 @@ export default function Navbar() {
     dispatch(setColor(event.target.value as string));
   };
 
+  const lang = useAppSelector((state: RootState) => state.language);
+
+  const langClick = () => {
+    if (lang.language === "es") {
+      dispatch(setLang("en"));
+    } else {
+      dispatch(setLang("es"));
+    }
+  };
+
   ///////////////////////////////
+
+  const links = [
+    {
+      label: lang.language === "es" ? es.navbar[0] : en.navbar[0],
+      route: "/",
+      icon: <PersonIcon />,
+    },
+    {
+      label: lang.language === "es" ? es.navbar[1] : en.navbar[1],
+      route: "/proyects",
+      icon: <FormatListBulletedIcon />,
+    },
+    {
+      label: lang.language === "es" ? es.navbar[2] : en.navbar[2],
+      route: "/contact",
+      icon: <ContactPageIcon />,
+    },
+  ];
 
   const [style, setStyle] = useState(styles.img);
 
@@ -191,57 +208,75 @@ export default function Navbar() {
           </Box>
           {/* /////////////////////////////////////////////////// */}
 
-          {/* //theme */}
-          <Box sx={{ marginTop: 2 }}>
-            <FormControl sx={{ width: 100 }} variant="outlined">
-              <InputLabel>
-                <TuneIcon></TuneIcon>
-              </InputLabel>
-              <Select
-                sx={{ borderColor: "blue" }}
-                onChange={handleChange}
-                label="Color"
-                autoWidth={true}
-              >
-                <MenuItem value={"blue"}>
-                  <CircleOutlinedIcon
-                    sx={{ color: "#0a3143", backgroundColor: "#276e90" }}
-                  >
-                    Blue
-                  </CircleOutlinedIcon>
-                </MenuItem>
-                <MenuItem value={"green"}>
-                  <CircleOutlinedIcon
-                    sx={{ color: "#eee9c7", backgroundColor: "#5a5239" }}
-                  >
-                    Green
-                  </CircleOutlinedIcon>
-                </MenuItem>
-                <MenuItem value={"orange"}>
-                  <CircleOutlinedIcon
-                    sx={{ color: "#333333", backgroundColor: "#e6621f" }}
-                  >
-                    Orange
-                  </CircleOutlinedIcon>
-                </MenuItem>
+          <Box sx={{ display: "flex" }}>
+            {/* //theme */}
+            <Box sx={{ marginTop: 2, marginRight: 2 }}>
+              <FormControl sx={{ width: 100 }} variant="outlined">
+                <InputLabel>
+                  <TuneIcon></TuneIcon>
+                </InputLabel>
+                <Select
+                  sx={{ borderColor: "blue" }}
+                  onChange={handleChange}
+                  label="Color"
+                  autoWidth={true}
+                >
+                  <MenuItem value={"blue"}>
+                    <CircleOutlinedIcon
+                      sx={{ color: "#0a3143", backgroundColor: "#276e90" }}
+                    >
+                      Blue
+                    </CircleOutlinedIcon>
+                  </MenuItem>
+                  <MenuItem value={"green"}>
+                    <CircleOutlinedIcon
+                      sx={{ color: "#eee9c7", backgroundColor: "#5a5239" }}
+                    >
+                      Green
+                    </CircleOutlinedIcon>
+                  </MenuItem>
+                  <MenuItem value={"orange"}>
+                    <CircleOutlinedIcon
+                      sx={{ color: "#333333", backgroundColor: "#e6621f" }}
+                    >
+                      Orange
+                    </CircleOutlinedIcon>
+                  </MenuItem>
 
-                <MenuItem value={"red"}>
-                  <CircleOutlinedIcon
-                    sx={{ color: "#ff3b3f", backgroundColor: "#232323" }}
-                  >
-                    Red
-                  </CircleOutlinedIcon>
-                </MenuItem>
+                  <MenuItem value={"red"}>
+                    <CircleOutlinedIcon
+                      sx={{ color: "#ff3b3f", backgroundColor: "#232323" }}
+                    >
+                      Red
+                    </CircleOutlinedIcon>
+                  </MenuItem>
 
-                <MenuItem value={"dark"}>
-                  <CircleOutlinedIcon
-                    sx={{ color: "#FFFFFF", backgroundColor: "#000000" }}
-                  >
-                    Dark
-                  </CircleOutlinedIcon>
-                </MenuItem>
-              </Select>
-            </FormControl>
+                  <MenuItem value={"dark"}>
+                    <CircleOutlinedIcon
+                      sx={{ color: "#FFFFFF", backgroundColor: "#000000" }}
+                    >
+                      Dark
+                    </CircleOutlinedIcon>
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+
+            {/* //Languages */}
+
+            <Box sx={{ width: { xs: "10vw", md: "2vw" }, marginTop: 4 }}>
+              <img
+                src={
+                  lang.language === "es"
+                    ? "https://flagicons.lipis.dev/flags/4x3/gb.svg"
+                    : "https://flagicons.lipis.dev/flags/4x3/es.svg"
+                }
+                alt={lang.language === "es" ? "en" : "es"}
+                onClick={langClick}
+              />
+            </Box>
+
+            {/* ////////////////////////////////////////////////////////////////// */}
           </Box>
 
           {/* //////////////////////////////////////////////////////////////// */}

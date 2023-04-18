@@ -4,17 +4,27 @@ import { Box, Slide } from "@mui/material";
 import style from "./page.module.css";
 import { useEffect, useState } from "react";
 
+//Languages
+
+import { es } from "../../../public/locale/es";
+import { en } from "../../../public/locale/en";
+
+///////////////////////////////////////////////////////
+
 //redux
 
 import type { RootState } from "@/app/Redux/store";
 import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector } from "../Redux/hooks";
 
 ////////////////
 
 export default function Proyects() {
   //redux
   const theme = useSelector((state: RootState) => state.theme);
-  const dispatch = useDispatch();
+
+  const lang = useAppSelector((state: RootState) => state.language.language);
+
   ///////////////////////////////
 
   const [linkStyle, setLinkStyle] = useState({
@@ -46,7 +56,7 @@ export default function Proyects() {
     <Slide direction="up" in={true} timeout={1500}>
       <div className={style.proyect}>
         <div className="titles" style={{ color: theme.bold }}>
-          Proyectos:
+          {lang === "es" ? es.navbar[1] : en.navbar[1]}:
         </div>
 
         <div className={style.body}>
@@ -56,31 +66,16 @@ export default function Proyects() {
             </div>
 
             <div className={style.resume}>
-              <p>
-                Desarrollo de una plataforma de e-learning, donde un usuario
-                invitado puede ver los cursos que se presentan, precios,
-                descripción e imagen, agregar los cursos al carrito de compra,
-                para completar la compra hay que loguearse en la aplicación o
-                registrarse, con un formulario o con la cuenta de Google con
-                Firebase. También del lado del administrador se puede ver todos
-                los cursos, modificar y crear nuevos, ver los usuarios y darle
-                permisos o banearlos y ver todas las ventas. Utilizando
-                metodologías ágiles como Scrum, me enfoqué en varias tareas
-                específicas, incluyendo la implementación de la barra de
-                búsqueda y los filtros, la integración de la pasarela de pagos
-                con MercadoPago y otras funciones clave del proyecto. Este
-                proyecto me permitió mejorar mis habilidades de trabajo en
-                equipo y colaboración en un ambiente de desarrollo ágil.
-              </p>
+              <p>{lang === "es" ? es.projects.devs[0] : en.projects.devs[0]}</p>
 
               <p>
-                Las tecnologías usadas fueron{" "}
+                {lang === "es" ? es.projects.devs[1] : en.projects.devs[1]}{" "}
                 <b style={{ color: theme.bold }}>
                   Typescript, JavaScript, Node.js, Express.js, React.js, Redux
                   toolkit, Material UI, PostgreSQL, sequelize, Firebase,
                   MercadoPago
                 </b>
-                , entre otros
+                , {lang === "es" ? es.projects.devs[2] : en.projects.devs[2]}
               </p>
               <div className={style.links}>
                 <p>
@@ -122,18 +117,24 @@ export default function Proyects() {
 
             <div className={style.resume}>
               <p>
-                Proyecto individual para el bootcamp de Henry que consiste en
-                una pagina para mostrar tanto pokemones de una api externa como
-                los creados en la base de datos propia.
+                {lang === "es"
+                  ? es.projects.pokedex[0]
+                  : en.projects.pokedex[0]}
               </p>
 
               <p>
-                Para la base de datos se utilizo{" "}
-                <b style={{ color: theme.bold }}>PostgreSQL y sequelize</b>,
-                para el backend{" "}
-                <b style={{ color: theme.bold }}>Node y Express.js</b>, y para
-                el frontend con{" "}
-                <b style={{ color: theme.bold }}> React.js y Redux</b>.
+                {lang === "es"
+                  ? es.projects.pokedex[1]
+                  : en.projects.pokedex[1]}{" "}
+                <b style={{ color: theme.bold }}>PostgreSQL, sequelize</b>,{" "}
+                {lang === "es"
+                  ? es.projects.pokedex[2]
+                  : en.projects.pokedex[2]}{" "}
+                <b style={{ color: theme.bold }}>Node, Express.js</b>,{" "}
+                {lang === "es"
+                  ? es.projects.pokedex[3]
+                  : en.projects.pokedex[3]}{" "}
+                <b style={{ color: theme.bold }}> React.js, Redux</b>.
               </p>
 
               <div className={style.links}>

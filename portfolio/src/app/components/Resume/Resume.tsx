@@ -5,17 +5,27 @@ import styles from "./Resume.module.css";
 import { Box, Slide } from "@mui/material";
 import { useEffect, useState } from "react";
 
+//Languages
+
+import { es } from "../../../../public/locale/es";
+import { en } from "../../../../public/locale/en";
+
+///////////////////////////////////////////////////////
+
 //redux
 
 import type { RootState } from "@/app/Redux/store";
 import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector } from "@/app/Redux/hooks";
 
 ///////////////////////////////////////////////////
 
 export default function Resume() {
   //redux
   const theme = useSelector((state: RootState) => state.theme);
-  const dispatch = useDispatch();
+
+  const lang = useAppSelector((state: RootState) => state.language.language);
+
   ///////////////////////////////
   const [linkStyle, setLinkStyle] = useState(theme.bold);
 
@@ -40,28 +50,19 @@ export default function Resume() {
               <div className={styles.name}>Jonathan Kim</div>
             </Box>
             <p>
-              Hola, mi nombre es Jonathan, y soy un desarrollador web Full Stack
-              de Posadas, Misiones, Argentina. Recientemente, he completado un
-              bootcamp de más de 800 horas de programación, y actualmente estoy
-              ampliando mis habilidades técnicas a través de una tecnicatura en
-              análisis de sistemas.
+              {lang === "es"
+                ? es.summary.description[0]
+                : en.summary.description[0]}
             </p>
             <p>
-              Anteriormente, estudié Ciencias Económicas, específicamente la
-              carrera de Contador Público, y trabajé en el e-commerce de una
-              empresa líder en productos eléctricos e iluminación. En esa
-              posición, fui responsable de mantener la página web y de cargar
-              todos los productos que vendían, lo que me permitió adquirir
-              valiosas habilidades en atención al cliente y en el mundo
-              empresarial.
+              {lang === "es"
+                ? es.summary.description[1]
+                : en.summary.description[1]}
             </p>
             <p>
-              Actualmente, estoy buscando una empresa innovadora donde pueda
-              combinar mis habilidades en programación con mi experiencia previa
-              para desarrollarme en puestos de nivel junior en Frontend o
-              Backend. Estoy muy emocionado por las oportunidades que me puedan
-              ofrecer y estoy seguro de que podré aportar valor a cualquier
-              proyecto en el que participe.
+              {lang === "es"
+                ? es.summary.description[2]
+                : en.summary.description[2]}
             </p>
 
             <p>
@@ -84,11 +85,11 @@ export default function Resume() {
         <Slide direction="left" in={true} timeout={1500}>
           <div className={styles.second}>
             <p className="titles" style={{ color: theme.bold }}>
-              Habilidades técnicas:
+              {lang === "es" ? es.summary.titles[0] : en.summary.titles[0]}
             </p>
             <div className={styles.resume}>
               <div className={styles.first}>
-                <p>Lenguajes:</p>
+                <p>{lang === "es" ? es.summary.lang : en.summary.lang}</p>
 
                 <ul>
                   <li key="Javascript">Javascript</li>
@@ -110,19 +111,26 @@ export default function Resume() {
                   <li key="CSS3">CSS3</li>
                   <li key="Material UI">Material UI</li>
                 </ul>
-                <p>Bases de datos:</p>
+                <p>{lang === "es" ? es.summary.db : en.summary.db}</p>
+
                 <ul>
                   <li key="PostgreSQL">PostgreSQL</li>
                 </ul>
               </div>
             </div>
             <p className="titles" style={{ color: theme.bold }}>
-              Habilidades blandas:
+              {lang === "es" ? es.summary.titles[1] : en.summary.titles[1]}
             </p>
             <ul>
-              <li key="Gestión del tiempo">Gestión del tiempo</li>
-              <li key="Trabajo en equipo">Trabajo en equipo</li>
-              <li key="Adaptabilidad al cambio">Adaptabilidad al cambio</li>
+              <li key="Gestión del tiempo">
+                {lang === "es" ? es.summary.soft[0] : en.summary.soft[0]}
+              </li>
+              <li key="Trabajo en equipo">
+                {lang === "es" ? es.summary.soft[1] : en.summary.soft[1]}
+              </li>
+              <li key="Adaptabilidad al cambio">
+                {lang === "es" ? es.summary.soft[2] : en.summary.soft[2]}
+              </li>
             </ul>
           </div>
         </Slide>
