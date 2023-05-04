@@ -27,6 +27,7 @@
   width: 20%;
   padding: 1vw;
   font-size: 3vh;
+  flex-direction: column;
 }
 
 .resume {

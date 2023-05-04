@@ -3,6 +3,8 @@
 import { Box, Slide } from "@mui/material";
 import style from "./page.module.css";
 import { useEffect, useState } from "react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 //Languages
 
@@ -68,6 +70,13 @@ export default function Proyects() {
           <div className={style.container}>
             <div className={style.title}>
               <p style={{ color: theme.bold }}>Devs Learning:</p>
+              <Zoom>
+                <img
+                  src="https://media.licdn.com/dms/image/C4D2DAQGZvZwylm-r5Q/profile-treasury-image-shrink_800_800/0/1678458494698?e=1683817200&v=beta&t=HYzk-iXvVcTxrRB-5PpBm3-F78KAXouGCFjYhjxxDOs"
+                  alt="devs"
+                  width="200"
+                />
+              </Zoom>
             </div>
 
             <div className={style.resume}>
@@ -121,6 +130,13 @@ export default function Proyects() {
           <div className={style.container}>
             <div className={style.title}>
               <p style={{ color: theme.bold }}>Dollar-blue:</p>
+              <Zoom>
+                <img
+                  src="https://media.licdn.com/dms/image/D4D22AQFG4RdrnFoNow/feedshare-shrink_2048_1536/0/1683000327639?e=1686182400&v=beta&t=NG0Q411wy454JqkfgK82MGOdE7080BvIqo2bk3eiql4"
+                  alt="dollar"
+                  width="200"
+                />
+              </Zoom>
             </div>
 
             <div className={style.resume}>
@@ -172,6 +188,13 @@ export default function Proyects() {
           <div className={style.container}>
             <div className={style.title}>
               <p style={{ color: theme.bold }}>Pokedex:</p>
+              <Zoom>
+                <img
+                  src="https://media.licdn.com/dms/image/C4D2DAQGP_s-9_toGdQ/profile-treasury-image-shrink_800_800/0/1678457855274?e=1683817200&v=beta&t=36Zed_UDPeKrqvUG9Q9_hb32pkwaMwjUXWpcwuiHU44"
+                  alt="pokedex"
+                  width="200"
+                />
+              </Zoom>
             </div>
 
             <div className={style.resume}>
