@@ -30,8 +30,10 @@ export default function Proyects() {
   const [linkStyle, setLinkStyle] = useState({
     deploy1: theme.bold,
     deploy2: theme.bold,
+    deploy3: theme.bold,
     github1: theme.bold,
     github2: theme.bold,
+    github3: theme.bold,
   });
 
   const handleOver = (label: string) => {
@@ -47,8 +49,10 @@ export default function Proyects() {
     setLinkStyle({
       deploy1: theme.bold,
       deploy2: theme.bold,
+      deploy3: theme.bold,
       github1: theme.bold,
       github2: theme.bold,
+      github3: theme.bold,
     });
   }, [theme]);
 
@@ -60,6 +64,7 @@ export default function Proyects() {
         </div>
 
         <div className={style.body}>
+          {/* devs */}
           <div className={style.container}>
             <div className={style.title}>
               <p style={{ color: theme.bold }}>Devs Learning:</p>
@@ -109,7 +114,61 @@ export default function Proyects() {
               </div>
             </div>
           </div>
+          {/* /////////////////////////////////////////////// */}
 
+          {/* dollar */}
+
+          <div className={style.container}>
+            <div className={style.title}>
+              <p style={{ color: theme.bold }}>Dollar-blue:</p>
+            </div>
+
+            <div className={style.resume}>
+              <p>
+                {lang === "es" ? es.projects.dollar[0] : en.projects.dollar[0]}
+              </p>
+
+              <p>
+                {lang === "es" ? es.projects.dollar[1] : en.projects.dollar[1]}{" "}
+                <b style={{ color: theme.bold }}>
+                  Typescript, Next.js 13, Next.js API, React, Bluelytics, React
+                  Google Charts.
+                </b>
+              </p>
+
+              <div className={style.links}>
+                <p>
+                  <a href="https://dollar-blue.vercel.app/" target="_blank">
+                    <b
+                      onMouseOver={() => handleOver("deploy3")}
+                      onMouseOut={() => handleOut("deploy3")}
+                      style={{ color: linkStyle.deploy3 }}
+                    >
+                      Deploy
+                    </b>
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/JONNYKIMBK/dollar-blue"
+                    target="_blank"
+                  >
+                    <b
+                      onMouseOver={() => handleOver("github3")}
+                      onMouseOut={() => handleOut("github3")}
+                      style={{ color: linkStyle.github3 }}
+                    >
+                      Github
+                    </b>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* /////////////////////////////////////////////////// */}
+
+          {/* pokemon */}
           <div className={style.container}>
             <div className={style.title}>
               <p style={{ color: theme.bold }}>Pokedex:</p>
@@ -169,6 +228,7 @@ export default function Proyects() {
               </div>
             </div>
           </div>
+          {/* ////////////////////////////////////// */}
         </div>
       </div>
     </Slide>

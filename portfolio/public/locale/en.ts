@@ -23,5 +23,9 @@ export const en = {
       "for the backend",
       "and for the frontend with",
     ],
+    dollar: [
+      "The application created in Next.js focuses on the value of the “blue” dollar in Argentina. The application obtains data from the external API Bluelytics and is updated daily except on days when banks are not working. In addition, it shows the current value of the Argentine peso in official or blue dollars and works as a calculator converting the amount of dollars to pesos at their official and blue values. It also has a chart made with Google Charts that shows a line chart of the official dollar and blue dollar values by selecting a range of 2 dates.",
+      "For this project use:",
+    ],
   },
 };

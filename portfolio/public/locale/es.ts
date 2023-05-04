@@ -27,5 +27,9 @@ export const es = {
       "para el backend",
       "y para el frontend con",
     ],
+    dollar: [
+      "La aplicación creada en Next.js se enfoca en el valor del dólar “blue” en Argentina. La aplicación obtiene los datos de la API externa Bluelytics y se actualiza diariamente con excepción de los días que no trabajan los bancos. Además, muestra el valor actual del peso argentino en dólar oficial o blue y funciona como calculadora convirtiendo la cantidad de dólares a pesos en su valor oficial y blue. También tiene un gráfico hecho con Google Charts que muestra seleccionando un rango de 2 fechas un gráfico de línea con los valores del dólar oficial y del dólar blue.",
+      "Para este proyecto utilice: ",
+    ],
   },
 };
