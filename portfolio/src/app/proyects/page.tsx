@@ -72,7 +72,7 @@ export default function Proyects() {
               <p style={{ color: theme.bold }}>Devs Learning:</p>
               <Zoom>
                 <img
-                  src="https://media.licdn.com/dms/image/C4D2DAQGZvZwylm-r5Q/profile-treasury-image-shrink_800_800/0/1678458494698?e=1683817200&v=beta&t=HYzk-iXvVcTxrRB-5PpBm3-F78KAXouGCFjYhjxxDOs"
+                  src="https://i.postimg.cc/Px8XnqmD/devs.webp"
                   alt="devs"
                   width="200"
                 />
@@ -132,7 +132,7 @@ export default function Proyects() {
               <p style={{ color: theme.bold }}>Dollar-blue:</p>
               <Zoom>
                 <img
-                  src="https://media.licdn.com/dms/image/D4D22AQFG4RdrnFoNow/feedshare-shrink_2048_1536/0/1683000327639?e=1686182400&v=beta&t=NG0Q411wy454JqkfgK82MGOdE7080BvIqo2bk3eiql4"
+                  src="https://i.postimg.cc/DzTdXWzv/dollar.webp"
                   alt="dollar"
                   width="200"
                 />
@@ -190,7 +190,7 @@ export default function Proyects() {
               <p style={{ color: theme.bold }}>Pokedex:</p>
               <Zoom>
                 <img
-                  src="https://media.licdn.com/dms/image/C4D2DAQGP_s-9_toGdQ/profile-treasury-image-shrink_800_800/0/1678457855274?e=1683817200&v=beta&t=36Zed_UDPeKrqvUG9Q9_hb32pkwaMwjUXWpcwuiHU44"
+                  src="https://i.postimg.cc/dtZ8NRkQ/pokemon.webp"
                   alt="pokedex"
                   width="200"
                 />
