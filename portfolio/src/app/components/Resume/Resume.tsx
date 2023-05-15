@@ -15,7 +15,7 @@ import { en } from "../../../../public/locale/en";
 //redux
 
 import type { RootState } from "@/app/Redux/store";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useAppSelector } from "@/app/Redux/hooks";
 
 ///////////////////////////////////////////////////
@@ -181,6 +181,16 @@ export default function Resume() {
                       height="20"
                     />{" "}
                     Material UI
+                  </li>
+
+                  <li key="Tailwind CSS">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
+                      alt="Tailwind CSS"
+                      width="20"
+                      height="20"
+                    />{" "}
+                    Tailwind CSS
                   </li>
                 </ul>
                 <p>{lang === "es" ? es.summary.db : en.summary.db}</p>
