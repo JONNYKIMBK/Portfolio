@@ -33,9 +33,11 @@ export default function Proyects() {
     deploy1: theme.bold,
     deploy2: theme.bold,
     deploy3: theme.bold,
+    deploy4: theme.bold,
     github1: theme.bold,
     github2: theme.bold,
     github3: theme.bold,
+    github4: theme.bold,
   });
 
   const handleOver = (label: string) => {
@@ -52,9 +54,11 @@ export default function Proyects() {
       deploy1: theme.bold,
       deploy2: theme.bold,
       deploy3: theme.bold,
+      deploy4: theme.bold,
       github1: theme.bold,
       github2: theme.bold,
       github3: theme.bold,
+      github4: theme.bold,
     });
   }, [theme]);
 
@@ -66,10 +70,139 @@ export default function Proyects() {
         </div>
 
         <div className={style.body}>
+          {/* quiz */}
+
+          <div className={style.container}>
+            <div className={style.title}>
+              <p style={{ color: theme.bold }}>
+                <b>Quiz:</b>
+              </p>
+              <Zoom>
+                <img
+                  src="https://i.postimg.cc/65h0cLNq/quiz.webp"
+                  alt="quiz"
+                  width="200"
+                />
+              </Zoom>
+
+              <p style={{ color: theme.bold }}>
+                <b>05/2023</b>
+              </p>
+            </div>
+
+            <div className={style.resume}>
+              <p>{lang === "es" ? es.projects.quiz[0] : en.projects.quiz[0]}</p>
+
+              <p>
+                {lang === "es" ? es.projects.quiz[1] : en.projects.quiz[1]}{" "}
+                <b style={{ color: theme.bold }}>Next.js & Tailwind CSS</b>{" "}
+                {lang === "es" ? es.projects.quiz[2] : en.projects.quiz[2]}
+              </p>
+
+              <div className={style.links}>
+                <p>
+                  <a href="https://quiz-jonnykim.vercel.app/" target="_blank">
+                    <b
+                      onMouseOver={() => handleOver("deploy4")}
+                      onMouseOut={() => handleOut("deploy4")}
+                      style={{ color: linkStyle.deploy4 }}
+                    >
+                      Deploy
+                    </b>
+                  </a>
+                </p>
+
+                <p>
+                  <a
+                    href="https://github.com/JONNYKIMBK/quiz/tree/main/quiz-app"
+                    target="_blank"
+                  >
+                    <b
+                      onMouseOver={() => handleOver("github4")}
+                      onMouseOut={() => handleOut("github4")}
+                      style={{ color: linkStyle.github4 }}
+                    >
+                      Github
+                    </b>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ////////////////////////////////////////////////////////// */}
+
+          {/* dollar */}
+
+          <div className={style.container}>
+            <div className={style.title}>
+              <p style={{ color: theme.bold }}>
+                <b>Dollar-blue:</b>
+              </p>
+              <Zoom>
+                <img
+                  src="https://i.postimg.cc/DzTdXWzv/dollar.webp"
+                  alt="dollar"
+                  width="200"
+                />
+              </Zoom>
+
+              <p style={{ color: theme.bold }}>
+                <b>05/2023</b>
+              </p>
+            </div>
+
+            <div className={style.resume}>
+              <p>
+                {lang === "es" ? es.projects.dollar[0] : en.projects.dollar[0]}
+              </p>
+
+              <p>
+                {lang === "es" ? es.projects.dollar[1] : en.projects.dollar[1]}{" "}
+                <b style={{ color: theme.bold }}>
+                  Typescript, Next.js 13, Next.js API, React, Bluelytics, React
+                  Google Charts.
+                </b>
+              </p>
+
+              <div className={style.links}>
+                <p>
+                  <a href="https://dollar-blue.vercel.app/" target="_blank">
+                    <b
+                      onMouseOver={() => handleOver("deploy3")}
+                      onMouseOut={() => handleOut("deploy3")}
+                      style={{ color: linkStyle.deploy3 }}
+                    >
+                      Deploy
+                    </b>
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/JONNYKIMBK/dollar-blue"
+                    target="_blank"
+                  >
+                    <b
+                      onMouseOver={() => handleOver("github3")}
+                      onMouseOut={() => handleOut("github3")}
+                      style={{ color: linkStyle.github3 }}
+                    >
+                      Github
+                    </b>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* /////////////////////////////////////////////////// */}
+
           {/* devs */}
           <div className={style.container}>
             <div className={style.title}>
-              <p style={{ color: theme.bold }}>Devs Learning:</p>
+              <p style={{ color: theme.bold }}>
+                <b>Devs Learning:</b>
+              </p>
               <Zoom>
                 <img
                   src="https://i.postimg.cc/Px8XnqmD/devs.webp"
@@ -77,6 +210,10 @@ export default function Proyects() {
                   width="200"
                 />
               </Zoom>
+
+              <p style={{ color: theme.bold }}>
+                <b>02/2023 - 03/2023</b>
+              </p>
             </div>
 
             <div className={style.resume}>
@@ -125,69 +262,12 @@ export default function Proyects() {
           </div>
           {/* /////////////////////////////////////////////// */}
 
-          {/* dollar */}
-
-          <div className={style.container}>
-            <div className={style.title}>
-              <p style={{ color: theme.bold }}>Dollar-blue:</p>
-              <Zoom>
-                <img
-                  src="https://i.postimg.cc/DzTdXWzv/dollar.webp"
-                  alt="dollar"
-                  width="200"
-                />
-              </Zoom>
-            </div>
-
-            <div className={style.resume}>
-              <p>
-                {lang === "es" ? es.projects.dollar[0] : en.projects.dollar[0]}
-              </p>
-
-              <p>
-                {lang === "es" ? es.projects.dollar[1] : en.projects.dollar[1]}{" "}
-                <b style={{ color: theme.bold }}>
-                  Typescript, Next.js 13, Next.js API, React, Bluelytics, React
-                  Google Charts.
-                </b>
-              </p>
-
-              <div className={style.links}>
-                <p>
-                  <a href="https://dollar-blue.vercel.app/" target="_blank">
-                    <b
-                      onMouseOver={() => handleOver("deploy3")}
-                      onMouseOut={() => handleOut("deploy3")}
-                      style={{ color: linkStyle.deploy3 }}
-                    >
-                      Deploy
-                    </b>
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="https://github.com/JONNYKIMBK/dollar-blue"
-                    target="_blank"
-                  >
-                    <b
-                      onMouseOver={() => handleOver("github3")}
-                      onMouseOut={() => handleOut("github3")}
-                      style={{ color: linkStyle.github3 }}
-                    >
-                      Github
-                    </b>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* /////////////////////////////////////////////////// */}
-
           {/* pokemon */}
           <div className={style.container}>
             <div className={style.title}>
-              <p style={{ color: theme.bold }}>Pokedex:</p>
+              <p style={{ color: theme.bold }}>
+                <b>Pokedex:</b>
+              </p>
               <Zoom>
                 <img
                   src="https://i.postimg.cc/dtZ8NRkQ/pokemon.webp"
@@ -195,6 +275,10 @@ export default function Proyects() {
                   width="200"
                 />
               </Zoom>
+
+              <p style={{ color: theme.bold }}>
+                <b>01/2023 - 02/2023</b>
+              </p>
             </div>
 
             <div className={style.resume}>

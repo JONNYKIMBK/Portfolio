@@ -27,5 +27,10 @@ export const en = {
       "The application created in Next.js focuses on the value of the “blue” dollar in Argentina. The application obtains data from the external API Bluelytics and is updated daily except on days when banks are not working. In addition, it shows the current value of the Argentine peso in official or blue dollars and works as a calculator converting the amount of dollars to pesos at their official and blue values. It also has a chart made with Google Charts that shows a line chart of the official dollar and blue dollar values by selecting a range of 2 dates.",
       "For this project use:",
     ],
+    quiz: [
+      "It is a simple multiple choice trivia game. Get the questions from the Open Trivia Database API. It is made with Next.js and Tailwind CSS was used for the styles. The app brings 30 questions from the API and displays one question and 4 possible answers at a time. For each correct answer, 1 point is added and the next question is shown. If you lose, you start over with 30 different random questions. There are questions of different themes and difficulties.",
+      "Use as main technologies",
+      "for the styles.",
+    ],
   },
 };
