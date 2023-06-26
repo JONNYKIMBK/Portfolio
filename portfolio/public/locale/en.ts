@@ -10,6 +10,7 @@ export const en = {
     lang: "Programming languages:",
     db: "Databases:",
     soft: ["Time management", "Teamwork", "Adaptability to change"],
+    cv: "https://drive.google.com/file/d/1xcha0U4QZyzAgTMpXHeB8jlUM0KZVk2j/view",
   },
   projects: {
     devs: [

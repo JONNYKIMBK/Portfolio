@@ -14,6 +14,7 @@ export const es = {
       "Trabajo en equipo",
       "Adaptabilidad al cambio",
     ],
+    cv: "https://drive.google.com/file/d/1yQyp-fHjKJSGt6QrYtERDz6HOYCBu5oa/view",
   },
   projects: {
     devs: [

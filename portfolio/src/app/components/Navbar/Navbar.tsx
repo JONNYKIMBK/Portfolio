@@ -87,7 +87,9 @@ export default function Navbar() {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{ position: { md: "fixed" }, top: { md: 0 }, width: { md: "100%" } }}
+    >
       <AppBar sx={{ backgroundColor: theme.navbarColor }} position="static">
         <Toolbar
           sx={{
@@ -112,7 +114,7 @@ export default function Navbar() {
                 onMouseOver={hoverChange}
                 onMouseOut={hoverChange2}
                 className={style}
-                src="https://media.licdn.com/dms/image/C4E03AQFkrhTACqM0qg/profile-displayphoto-shrink_800_800/0/1655984250480?e=1685577600&v=beta&t=usXAAKA5n8E0sGG3KhCH_0XIzZxkhPifJQmo5HeYRYM"
+                src="https://i.postimg.cc/prRFT8Hn/Perfil.jpg"
                 alt=""
               />
             </Link>
