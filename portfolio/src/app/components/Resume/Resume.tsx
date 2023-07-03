@@ -41,7 +41,7 @@ export default function Resume() {
   }, [theme]);
 
   return (
-    <div className={styles.body}>
+    <div id="resume" className={styles.body}>
       <div className={styles.resume}>
         <div className={styles.first}>
           <Box
@@ -91,13 +91,13 @@ export default function Resume() {
             {lang === "es" ? es.summary.titles[0] : en.summary.titles[0]}
           </p>
           <div className={styles.resume}>
-            {/* <div className={styles.first}> */}
             <Box
               sx={{
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "center",
                 padding: 2,
+                gap: 2,
               }}
             >
               <img
@@ -169,7 +169,6 @@ export default function Resume() {
                 height="80"
               />
             </Box>
-            {/* </div> */}
           </div>
           <p className="titles" style={{ color: theme.bold }}>
             {lang === "es" ? es.summary.titles[1] : en.summary.titles[1]}

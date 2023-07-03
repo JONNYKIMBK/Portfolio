@@ -1,7 +1,8 @@
-.proyect {
+.project {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5%;
 }
 
 .body {

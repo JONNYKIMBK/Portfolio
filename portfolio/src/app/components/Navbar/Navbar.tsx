@@ -54,17 +54,17 @@ export default function Navbar() {
   const links = [
     {
       label: lang.language === "es" ? es.navbar[0] : en.navbar[0],
-      route: "/",
+      route: "resume",
       icon: <PersonIcon />,
     },
     {
       label: lang.language === "es" ? es.navbar[1] : en.navbar[1],
-      route: "/proyects",
+      route: "projects",
       icon: <FormatListBulletedIcon />,
     },
     {
       label: lang.language === "es" ? es.navbar[2] : en.navbar[2],
-      route: "/contact",
+      route: "contact",
       icon: <ContactPageIcon />,
     },
   ];
@@ -86,9 +86,25 @@ export default function Navbar() {
     }
   };
 
+  const sectionId = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    event.preventDefault();
+    const section = document.querySelector(`#${id}`);
+    if (section !== null) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Box
-      sx={{ position: { md: "fixed" }, top: { md: 0 }, width: { md: "100%" } }}
+    // sx={{
+    //   position: { md: "fixed" },
+    //   top: { md: 0 },
+    //   width: { md: "100%" },
+    //   zIndex: 1,
+    // }}
     >
       <AppBar sx={{ backgroundColor: theme.navbarColor }} position="static">
         <Toolbar
@@ -110,7 +126,6 @@ export default function Navbar() {
           >
             <Link href="/">
               <img
-                // onClick={handleChange}
                 onMouseOver={hoverChange}
                 onMouseOut={hoverChange2}
                 className={style}
@@ -139,7 +154,7 @@ export default function Navbar() {
                 <Link
                   key={label}
                   href={route}
-                  // className={styles.link}
+                  onClick={(event) => sectionId(event, route)}
                 >
                   <Box
                     sx={{
@@ -186,7 +201,7 @@ export default function Navbar() {
                   <Link
                     key={label}
                     href={route}
-                    // className={styles.link}
+                    onClick={(event) => sectionId(event, route)}
                   >
                     <Box
                       sx={{
