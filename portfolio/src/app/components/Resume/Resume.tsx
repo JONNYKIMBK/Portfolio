@@ -112,6 +112,13 @@ export default function Resume() {
                 width="80"
                 height="80"
               />
+
+              <img
+                src="https://www.pinclipart.com/picdir/middle/534-5345877_python-logo-clipart.png"
+                alt="Python"
+                width="80"
+                height="80"
+              />
               <img
                 src="https://camo.githubusercontent.com/c128a632c96ba308e5ede4c2f0ec513856f663c6794c27e1624beb8a88aa7309/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f3931392f3931393832352e706e67"
                 alt="Node"
@@ -136,6 +143,14 @@ export default function Resume() {
                 width="80"
                 height="80"
               />
+
+              <img
+                src="https://th.bing.com/th/id/R.6fc1c04b114f92b2ea6747c9a0b57f61?rik=xXmXG%2bKcP3wJWw&pid=ImgRaw&r=0"
+                alt="Vue"
+                width="80"
+                height="80"
+              />
+
               <img
                 src="https://camo.githubusercontent.com/0d780585b41551e0d1aeafb0a7841acd91586bcf39d5b7f8eceb707175fcacfd/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f3137342f3137343835342e706e67"
                 alt="HTML5"
@@ -165,6 +180,13 @@ export default function Resume() {
               <img
                 src="https://camo.githubusercontent.com/cec0f4d96b259673ed3ace71c57ba5e1c7dd8dcab9d0f249f2cce368f314adee/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f353936382f353936383334322e706e67"
                 alt="PostgreSQL"
+                width="80"
+                height="80"
+              />
+
+              <img
+                src="https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2019/07/GraphQL_Logo.svg.png?fit=2000%2C2000&ssl=1"
+                alt="Graphql"
                 width="80"
                 height="80"
               />
