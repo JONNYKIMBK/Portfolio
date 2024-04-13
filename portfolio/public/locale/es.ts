@@ -37,5 +37,9 @@ export const es = {
       "Utilice como principales tecnologías",
       "para los estilos.",
     ],
+    rick: [
+      "Aplicación web creada para un challenge técnico, que permita a los usuarios buscar y visualizar información sobre personajes de la serie Rick and Morty utilizando la Api de Rick and Morty. Para el front se utilizo React con Vite y las consultas a la api mediante Graphql.",
+      "Tecnologías utilizadas: ",
+    ],
   },
 };

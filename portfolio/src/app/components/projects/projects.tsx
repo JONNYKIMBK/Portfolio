@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import style from "./projects.module.css";
@@ -68,6 +69,73 @@ export default function Projects() {
       </div>
 
       <div className={style.body}>
+        {/* rick & morty */}
+
+        <div className={style.container}>
+          <div className={style.title}>
+            <p style={{ color: theme.bold }}>
+              <b>Rick & Morty:</b>
+            </p>
+            <Zoom>
+              <img
+                src="https://i.postimg.cc/4d1YkQ2d/Screenshot-2024-04-12-215246.png"
+                alt="quiz"
+                width="200"
+              />
+            </Zoom>
+
+            <p style={{ color: theme.bold }}>
+              <b>01/2024</b>
+            </p>
+          </div>
+
+          <div className={style.resume}>
+            <p>{lang === "es" ? es.projects.rick[0] : en.projects.rick[0]}</p>
+
+            <p>
+              {lang === "es" ? es.projects.rick[1] : en.projects.rick[1]}
+              <b style={{ color: theme.bold }}>
+                React.js, Vite, Graphql & Apollo
+              </b>
+              {"."}
+            </p>
+
+            <div className={style.links}>
+              <p>
+                <a
+                  href="https://rick-morty-jonnykim.vercel.app/"
+                  target="_blank"
+                >
+                  <b
+                    onMouseOver={() => handleOver("deploy4")}
+                    onMouseOut={() => handleOut("deploy4")}
+                    style={{ color: linkStyle.deploy4 }}
+                  >
+                    Deploy
+                  </b>
+                </a>
+              </p>
+
+              <p>
+                <a
+                  href="https://github.com/JONNYKIMBK/rick-morty"
+                  target="_blank"
+                >
+                  <b
+                    onMouseOver={() => handleOver("github4")}
+                    onMouseOut={() => handleOut("github4")}
+                    style={{ color: linkStyle.github4 }}
+                  >
+                    Github
+                  </b>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* //////////////////////////////////////////////////////// */}
+
         {/* quiz */}
 
         <div className={style.container}>
