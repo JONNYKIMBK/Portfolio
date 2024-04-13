@@ -33,5 +33,9 @@ export const en = {
       "Use as main technologies",
       "for the styles.",
     ],
+    rick: [
+      "Web application created for a technical challenge, which allows users to search and view information about characters from the Rick and Morty series using the Rick and Morty API. For the front, React was used with Vite and the queries to the API using Graphql.",
+      "Used technology: ",
+    ],
   },
 };
