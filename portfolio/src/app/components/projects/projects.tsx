@@ -103,7 +103,7 @@ export default function Projects() {
             <div className={style.links}>
               <p>
                 <a
-                  href="https://rick-morty-jonnykim.vercel.app/"
+                  href="https://rick-morty-jonnykims-projects.vercel.app/"
                   target="_blank"
                 >
                   <b
