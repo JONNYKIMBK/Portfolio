@@ -1,23 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client';
 
-import Link from "next/link";
-import styles from "./Resume.module.css";
-import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import styles from './Resume.module.css';
+import { Box } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 //Languages
 
-import { es } from "../../../../public/locale/es";
-import { en } from "../../../../public/locale/en";
+import { es } from '../../../../public/locale/es';
+import { en } from '../../../../public/locale/en';
 
 ///////////////////////////////////////////////////////
 
 //redux
 
-import type { RootState } from "@/app/Redux/store";
-import { useSelector } from "react-redux";
-import { useAppSelector } from "@/app/Redux/hooks";
+import type { RootState } from '@/app/Redux/store';
+import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/app/Redux/hooks';
 
 ///////////////////////////////////////////////////
 
@@ -47,33 +47,27 @@ export default function Resume() {
         <div className={styles.first}>
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
           >
             <Box sx={{ color: theme.bold }}>
               <div className={styles.name}>Jonathan Kim</div>
             </Box>
-            <p>
-              {lang === "es"
-                ? es.summary.description[0]
-                : en.summary.description[0]}
-            </p>
-            <p>
-              {lang === "es"
-                ? es.summary.description[1]
-                : en.summary.description[1]}
-            </p>
-            <p>
-              {lang === "es"
-                ? es.summary.description[2]
-                : en.summary.description[2]}
-            </p>
+
+            <Box>
+              {(lang === 'es'
+                ? es.summary.description
+                : en.summary.description
+              ).map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </Box>
 
             <p>
               <Link
-                href={lang === "es" ? es.summary.cv : en.summary.cv}
+                href={lang === 'es' ? es.summary.cv : en.summary.cv}
                 target="_blank"
               >
                 <b
@@ -89,20 +83,20 @@ export default function Resume() {
         </div>
         <div className={styles.second}>
           <p className="titles" style={{ color: theme.bold }}>
-            {lang === "es" ? es.summary.titles[0] : en.summary.titles[0]}
+            {lang === 'es' ? es.summary.titles[0] : en.summary.titles[0]}
           </p>
           <div className={styles.resume}>
             <Box
               sx={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
                 padding: 2,
                 gap: 2,
               }}
             >
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Javascript"
               >
@@ -123,7 +117,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Typescript"
               >
@@ -154,7 +148,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Python"
               >
@@ -178,7 +172,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Node"
               >
@@ -214,7 +208,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Express"
               >
@@ -238,7 +232,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="React"
               >
@@ -267,7 +261,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Redux"
               >
@@ -295,7 +289,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Vue"
               >
@@ -319,7 +313,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="HTML5"
               >
@@ -351,7 +345,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="CSS3"
               >
@@ -383,7 +377,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Material UI"
               >
@@ -432,7 +426,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Tailwind CSS"
               >
@@ -452,7 +446,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="PostgreSQL"
               >
@@ -484,7 +478,7 @@ export default function Resume() {
               </div>
 
               <div
-                style={{ width: "80px", height: "80px" }}
+                style={{ width: '80px', height: '80px' }}
                 role="img"
                 aria-label="Graphql"
               >
@@ -515,17 +509,17 @@ export default function Resume() {
             </Box>
           </div>
           <p className="titles" style={{ color: theme.bold }}>
-            {lang === "es" ? es.summary.titles[1] : en.summary.titles[1]}
+            {lang === 'es' ? es.summary.titles[1] : en.summary.titles[1]}
           </p>
           <ul>
             <li key="Gestión del tiempo">
-              {lang === "es" ? es.summary.soft[0] : en.summary.soft[0]}
+              {lang === 'es' ? es.summary.soft[0] : en.summary.soft[0]}
             </li>
             <li key="Trabajo en equipo">
-              {lang === "es" ? es.summary.soft[1] : en.summary.soft[1]}
+              {lang === 'es' ? es.summary.soft[1] : en.summary.soft[1]}
             </li>
             <li key="Adaptabilidad al cambio">
-              {lang === "es" ? es.summary.soft[2] : en.summary.soft[2]}
+              {lang === 'es' ? es.summary.soft[2] : en.summary.soft[2]}
             </li>
           </ul>
         </div>
